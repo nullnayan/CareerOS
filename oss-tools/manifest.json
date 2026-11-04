@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-11-03T08:20:34.328224+00:00",
+  "python": "3.11",
+  "tools": [
+    {
+      "id": "jobspy",
+      "upstream_name": "python-jobspy",
+      "repository": "https://github.com/speedyapply/JobSpy",
+      "source_checkout": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\sources\\JobSpy",
+      "pinned_commit": "a606f9cf077c34f6ce6cbfcc76238f57b3c20671",
+      "actual_commit": "a606f9cf077c34f6ce6cbfcc76238f57b3c20671",
+      "commit_matches": true,
+      "distribution_versions": {
+        "python-jobspy": "1.4.1"
+      },
+      "environment": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\backend\\.source-tools-venv",
+      "interpreter": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\backend\\.source-tools-venv\\Scripts\\python.exe",
+      "isolated_from_backend_production_venv": true,
+      "install_mode": "editable pinned local source in isolated non-production venv",
+      "lock_file": "oss-tools/locks/jobspy-py311.lock.txt",
+      "lock_sha256": "fb0ca0039467c9b825e1c21a52ed014bacf084b491bcf1482a84bcc00c871859",
+      "locked_requirement_count": 21,
+      "license_file": "oss-tools/licenses/JobSpy-LICENSE.txt",
+      "license_sha256": "a025d43c633c17a243cc08fc7579029f81b3102210d92d458cd148f7ecf112fd",
+      "installed": true
+    },
+    {
+      "id": "ats_scrapers",
+      "upstream_name": "ats-scrapers",
+      "repository": "https://github.com/kalil0321/ats-scrapers",
+      "source_checkout": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\sources\\ats-scrapers",
+      "pinned_commit": "6b44a1badc9bfbf5cf176f75265cc5729e520e99",
+      "actual_commit": "6b44a1badc9bfbf5cf176f75265cc5729e520e99",
+      "commit_matches": true,
+      "distribution_versions": {
+        "ats-scrapers": "0.3.0"
+      },
+      "environment": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\ats",
+      "interpreter": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\ats\\Scripts\\python.exe",
+      "isolated_from_backend_production_venv": true,
+      "install_mode": "editable pinned local source in dedicated isolated venv; unnecessary stealth extras omitted",
+      "lock_file": "oss-tools/locks/ats-py311.lock.txt",
+      "lock_sha256": "c93b7d237fe9bb014dfcf6b9b5ac00778a73b4b514e02c570845e8887ebdd05e",
+      "locked_requirement_count": 27,
+      "license_file": "oss-tools/licenses/ats-scrapers-LICENSE.txt",
+      "license_sha256": "02c0c4be20ca38e8beb8d834dabffd49c63d91b1434ee60af7156c3bb61466ae",
+      "installed": true
+    },
+    {
+      "id": "instahyre",
+      "upstream_name": "instahyre-scraper",
+      "repository": "https://github.com/omkarcloud/instahyre-scraper",
+      "source_checkout": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\sources\\instahyre-scraper",
+      "pinned_commit": "16a64f440e39a1545ea1322e21c6d8ef654a3358",
+      "actual_commit": "16a64f440e39a1545ea1322e21c6d8ef654a3358",
+      "commit_matches": true,
+      "distribution_versions": {},
+      "environment": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\instahyre",
+      "interpreter": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\instahyre\\Scripts\\python.exe",
+      "isolated_from_backend_production_venv": true,
+      "install_mode": "pinned requirements in dedicated venv; runner imports pinned local source tree",
+      "lock_file": "oss-tools/locks/instahyre-py311.lock.txt",
+      "lock_sha256": "6710a6c5f29e23a01d2be727fd53b697e77df37af5c5be61be88c40c8d862679",
+      "locked_requirement_count": 9,
+      "license_file": "oss-tools/licenses/instahyre-scraper-LICENSE.txt",
+      "license_sha256": "d7c5cf5488aaa9046fe8a9f08fa5bdb508ebfb74f4f69843da6af4b7d69530fc",
+      "installed": true
+    },
+    {
+      "id": "internshala",
+      "upstream_name": "internshala-scraper",
+      "repository": "https://github.com/omkarcloud/internshala-scraper",
+      "source_checkout": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\sources\\internshala-scraper",
+      "pinned_commit": "4755e7c83ec565e456384dffede100e9dfdc6a3d",
+      "actual_commit": "4755e7c83ec565e456384dffede100e9dfdc6a3d",
+      "commit_matches": true,
+      "distribution_versions": {},
+      "environment": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\internshala",
+      "interpreter": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\internshala\\Scripts\\python.exe",
+      "isolated_from_backend_production_venv": true,
+      "install_mode": "pinned requirements in dedicated venv; runner imports pinned local source tree",
+      "lock_file": "oss-tools/locks/internshala-py311.lock.txt",
+      "lock_sha256": "199ecd6037bf7ee7405af2f8a6f05ac2d751448ac125a1f03da569fe025e4559",
+      "locked_requirement_count": 10,
+      "license_file": "oss-tools/licenses/internshala-scraper-LICENSE.txt",
+      "license_sha256": "d7c5cf5488aaa9046fe8a9f08fa5bdb508ebfb74f4f69843da6af4b7d69530fc",
+      "installed": true
+    },
+    {
+      "id": "shine",
+      "upstream_name": "shine-scraper",
+      "repository": "https://github.com/omkarcloud/shine-scraper",
+      "source_checkout": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\sources\\shine-scraper",
+      "pinned_commit": "ec9c0978b71ff502bf17e6b34fd0a64d150e410c",
+      "actual_commit": "ec9c0978b71ff502bf17e6b34fd0a64d150e410c",
+      "commit_matches": true,
+      "distribution_versions": {},
+      "environment": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\shine",
+      "interpreter": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\shine\\Scripts\\python.exe",
+      "isolated_from_backend_production_venv": true,
+      "install_mode": "pinned requirements in dedicated venv; runner imports pinned local source tree",
+      "lock_file": "oss-tools/locks/shine-py311.lock.txt",
+      "lock_sha256": "dc3b9ba83853c2b60fc33cf9966d3d4daa0f472e4afcb8849e4eb3523e942d8b",
+      "locked_requirement_count": 9,
+      "license_file": "oss-tools/licenses/shine-scraper-LICENSE.txt",
+      "license_sha256": "d7c5cf5488aaa9046fe8a9f08fa5bdb508ebfb74f4f69843da6af4b7d69530fc",
+      "installed": true
+    },
+    {
+      "id": "crawl4ai",
+      "upstream_name": "Crawl4AI",
+      "repository": "https://github.com/unclecode/crawl4ai",
+      "source_checkout": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\sources\\crawl4ai",
+      "pinned_commit": "838869bdda93f25e6d50b3f50ae9577d9b19a586",
+      "actual_commit": "838869bdda93f25e6d50b3f50ae9577d9b19a586",
+      "commit_matches": true,
+      "distribution_versions": {
+        "Crawl4AI": "0.9.5",
+        "playwright": "1.64.1"
+      },
+      "environment": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\crawl4ai",
+      "interpreter": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\environments\\crawl4ai\\Scripts\\python.exe",
+      "isolated_from_backend_production_venv": true,
+      "install_mode": "editable pinned local source in isolated venv; Playwright Chromium revision 1248",
+      "lock_file": "oss-tools/locks/crawl4ai-py311.lock.txt",
+      "lock_sha256": "036654f81b4de063867e0c52c8792c4ee023096abfff5fd6542a40b6a6112b9f",
+      "locked_requirement_count": 94,
+      "license_file": "oss-tools/licenses/crawl4ai-LICENSE.txt",
+      "license_sha256": "86eb36c83071135c32c3287d2fc7dd24436874182d798a6e1926a8655d73101f",
+      "installed": true
+    }
+  ],
+  "browser_runtime": {
+    "playwright_version": "1.64.1",
+    "chromium_revision": "1248",
+    "binaries": [
+      {
+        "path": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\browsers\\chromium-1248\\chrome-win64\\chrome.exe",
+        "sha256": "7f08161bbeb2853ffe1780a9ded4985087f52efb9725d7d8207aabdd42f7cfb9",
+        "size_bytes": 4578816
+      },
+      {
+        "path": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime\\browsers\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+        "sha256": "f77d8e27c8db1e4ac0399459a00e0c97bb9417adc393474cabaffebe2314ecb0",
+        "size_bytes": 216950272
+      }
+    ],
+    "isolated_runtime": true
+  },
+  "runtime_root": "C:\\Users\\nayan\\Downloads\\careeros_scaffold\\careeros\\oss-tools\\runtime",
+  "ignore_rule": "/oss-tools/runtime/"
+}

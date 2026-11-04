@@ -1,0 +1,15 @@
+Nayan Kumar
+nayankumar@example.com | 123-456-7890
+
+PROFESSIONAL SUMMARY
+A skilled software engineer with 2 years of experience.
+
+CORE SKILLS
+Programming: Python, Java, C++
+Web: React, Node.js
+
+PROFESSIONAL EXPERIENCE
+Software Engineer
+Google
+Jan 2021 - Present
+- Developed scalable backend systems using Python and Node.js.

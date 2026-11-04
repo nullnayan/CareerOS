@@ -1,0 +1,49 @@
+# Part 1 upstream checkouts, isolated interpreters, browser binaries and probes.
+/oss-tools/runtime/
+
+# Credentials and machine settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.claude/
+.launcher/
+/scripts/CareerOS.toml
+
+# Dependencies, caches and generated builds
+node_modules/
+venv/
+.venv/
+.source-tools-venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.next*/
+out/
+dist/
+*.tsbuildinfo
+*.log
+
+# Local workspaces, backups, databases and personal documents
+.implementation-backups/
+scratch/
+%SystemDrive%/
+*.db
+*.db-*
+*.sqlite*
+*.sql
+*.zip
+*.pdf
+/NAYAN_KUMAR_RESUME.tex
+/backend/data/
+/backend/uploads/
+/backend/latest_resume_json*.txt
+/backend/temp_resume.json
+/backend/validation_report.json
+
+.DS_Store
+Thumbs.db

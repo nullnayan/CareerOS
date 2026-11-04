@@ -1,0 +1,9 @@
+{# partials/languages.html — v1 schema — objects with language/fluency/hidden #}
+{% if data.languages and section_visible('languages') %}
+<div class="languages-section section-block">
+    <h2>Languages</h2>
+    <div class="skills-list">
+        {% for lang in data.languages %}{% if not lang | is_hidden %}{% if not loop.first %} &nbsp;•&nbsp; {% endif %}{{ lang.language }}{% if lang.fluency %} ({{ lang.fluency }}){% endif %}{% endif %}{% endfor %}
+    </div>
+</div>
+{% endif %}

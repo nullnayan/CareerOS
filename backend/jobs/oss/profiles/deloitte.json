@@ -1,0 +1,30 @@
+{
+  "source_id": "deloitte",
+  "primary_ats_url": "https://southasiacareers.deloitte.com/",
+  "preferred_tool": "crawl4ai",
+  "official_url": "https://www.deloitte.com/global/en/careers/job-search.html",
+  "entry_url": "https://southasiacareers.deloitte.com/search/",
+  "approved_domains": ["deloitte.com"],
+  "company_fallback": "Deloitte",
+  "query_parameters": {"q": "role", "locationsearch": "location"},
+  "search_interaction": "GET query parameters; unverified; Deloitte India and other entities require separate mapping",
+  "scroll_steps": 2,
+  "page_ready_selector": "body",
+  "job_link_selectors": ["a[href*='/careers/job']", "a[href*='/jobs/']", "a[href*='job-details']"],
+  "next_selectors": ["a[rel='next']", "a[aria-label*='Next']"],
+  "job_card_selector": "article, [class*='job-card'], [class*='job-listing']",
+  "title_selectors": ["h1", "h2", "h3", "[class*='title']"],
+  "company_selectors": ["[class*='company']"],
+  "location_selectors": ["[class*='location']"],
+  "description_selectors": ["[class*='description']", "main"],
+  "empty_indicators": ["no jobs found", "no openings", "no results"],
+  "login_indicators": ["sign in to continue", "log in to continue"],
+  "challenge_indicators": ["captcha", "verify you are human", "access denied", "challenge-platform"],
+  "max_pages": 2,
+  "max_details": 2,
+  "load_more_selector": null,
+  "robots_required": true,
+  "access_state": "official careers URL identified; Deloitte India entity and public search route unverified"
+}
+
+

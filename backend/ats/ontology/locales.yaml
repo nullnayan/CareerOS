@@ -1,0 +1,4 @@
+US: {photo: forbidden, dob: forbidden, personal_details: forbidden, declaration: forbidden, max_pages: 1, address: city_state_only}
+UK: {photo: forbidden, dob: forbidden, personal_details: forbidden, declaration: forbidden, max_pages: 2}
+IN: {photo: discouraged, dob: discouraged, personal_details: discouraged, declaration: discouraged, max_pages: 2}
+DE: {photo: conventional, dob: conventional, personal_details: allowed, declaration: forbidden, max_pages: 2}

@@ -1,0 +1,320 @@
+{
+  "generated_utc": "2026-11-03T08:26:56.619390+00:00",
+  "git_repository_present": false,
+  "git_repository_parent_present": false,
+  "runtime_artifacts_listed": false,
+  "runtime_artifact_root": "oss-tools/runtime/ (ignored; contains downloaded checkouts, isolated environments, browser binaries and redacted probes)",
+  "protected_unchanged": [
+    "active search routing",
+    "backend/venv",
+    "production environment files",
+    "production migrations",
+    "registry/source enablement",
+    "legacy collectors",
+    "personal database/settings",
+    "frontend/backend/worker/Docker services"
+  ],
+  "file_count": 60,
+  "files": [
+    {
+      "path": ".gitignore",
+      "change": "created",
+      "purpose": "Ignore only the downloaded OSS runtime tree, environments, browser binaries and probe artifacts."
+    },
+    {
+      "path": "backend/.gitignore",
+      "change": "modified",
+      "purpose": "Add an ignore rule for the isolated non-production JobSpy environment."
+    },
+    {
+      "path": "backend/jobs/oss/__init__.py",
+      "change": "created",
+      "purpose": "OSS collector package/module support."
+    },
+    {
+      "path": "backend/jobs/oss/ats_adapter.py",
+      "change": "created",
+      "purpose": "Standalone adapter from the frozen contract to its isolated upstream runner."
+    },
+    {
+      "path": "backend/jobs/oss/catalog.py",
+      "change": "created",
+      "purpose": "Pinned tool versions, source URLs, country limits and approved domains."
+    },
+    {
+      "path": "backend/jobs/oss/contracts.py",
+      "change": "created",
+      "purpose": "Frozen bounded request, batch, failure and Snapshot contract."
+    },
+    {
+      "path": "backend/jobs/oss/crawl_adapter.py",
+      "change": "created",
+      "purpose": "Standalone adapter from the frozen contract to its isolated upstream runner."
+    },
+    {
+      "path": "backend/jobs/oss/crawl_extract.py",
+      "change": "created",
+      "purpose": "Structured JobPosting and evidence-validated local extraction helpers."
+    },
+    {
+      "path": "backend/jobs/oss/cursors.py",
+      "change": "created",
+      "purpose": "Query-bound versioned cursor encoding and validation."
+    },
+    {
+      "path": "backend/jobs/oss/jobspy_adapter.py",
+      "change": "created",
+      "purpose": "Standalone adapter from the frozen contract to its isolated upstream runner."
+    },
+    {
+      "path": "backend/jobs/oss/normalize.py",
+      "change": "created",
+      "purpose": "Normalize upstream records, URLs, dates, descriptions and salary evidence."
+    },
+    {
+      "path": "backend/jobs/oss/omkar_adapter.py",
+      "change": "created",
+      "purpose": "Standalone adapter from the frozen contract to its isolated upstream runner."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/accenture.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/cognizant.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/company_portal.template.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/cutshort.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/cuvette.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/deloitte.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/foundit.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/infosys.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/superset.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/tcs.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/unstop.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/wellfound.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/profiles/wipro.json",
+      "change": "created",
+      "purpose": "Reviewed Crawl4AI source profile with explicit domain, search, extraction and access state."
+    },
+    {
+      "path": "backend/jobs/oss/runners/__init__.py",
+      "change": "created",
+      "purpose": "Isolated JSON subprocess runner for the pinned upstream collector."
+    },
+    {
+      "path": "backend/jobs/oss/runners/_common.py",
+      "change": "created",
+      "purpose": "Isolated JSON subprocess runner for the pinned upstream collector."
+    },
+    {
+      "path": "backend/jobs/oss/runners/ats_runner.py",
+      "change": "created",
+      "purpose": "Isolated JSON subprocess runner for the pinned upstream collector."
+    },
+    {
+      "path": "backend/jobs/oss/runners/crawl4ai_runner.py",
+      "change": "created",
+      "purpose": "Isolated JSON subprocess runner for the pinned upstream collector."
+    },
+    {
+      "path": "backend/jobs/oss/runners/jobspy_runner.py",
+      "change": "created",
+      "purpose": "Isolated JSON subprocess runner for the pinned upstream collector."
+    },
+    {
+      "path": "backend/jobs/oss/runners/omkar_runner.py",
+      "change": "created",
+      "purpose": "Isolated JSON subprocess runner for the pinned upstream collector."
+    },
+    {
+      "path": "backend/jobs/oss/runtime.py",
+      "change": "created",
+      "purpose": "Supervised subprocess boundary, deadlines, output limits and process-tree cleanup."
+    },
+    {
+      "path": "backend/scripts/build_oss_coverage.py",
+      "change": "created",
+      "purpose": "Rebuild the source ledger from static inventory and redacted probe evidence."
+    },
+    {
+      "path": "backend/scripts/build_oss_manifest.py",
+      "change": "created",
+      "purpose": "Rebuild version, commit, lock/license and browser-hash provenance."
+    },
+    {
+      "path": "backend/scripts/check_oss_collectors.py",
+      "change": "created",
+      "purpose": "Read-only runtime/browser/local-model doctor; no sites, DB or services."
+    },
+    {
+      "path": "backend/scripts/probe_oss_collectors.py",
+      "change": "created",
+      "purpose": "Bounded neutral public probes with redacted JSON artifacts and per-source selection."
+    },
+    {
+      "path": "backend/scripts/setup_oss_collectors.ps1",
+      "change": "created",
+      "purpose": "Repeatable pinned source, lock, environment and browser setup."
+    },
+    {
+      "path": "backend/tests/test_oss_adapters.py",
+      "change": "created",
+      "purpose": "Adapter paging, cursor semantics, errors and access gates."
+    },
+    {
+      "path": "backend/tests/test_oss_contracts.py",
+      "change": "created",
+      "purpose": "Request validation, batch/snapshot conversion and safe failure contracts."
+    },
+    {
+      "path": "backend/tests/test_oss_isolated_runners.py",
+      "change": "created",
+      "purpose": "Real isolated upstream imports/serialization and mocked runner traversal under budgets."
+    },
+    {
+      "path": "backend/tests/test_oss_normalize.py",
+      "change": "created",
+      "purpose": "Normalization, salary provenance, dates, duplicates and URL safety."
+    },
+    {
+      "path": "backend/tests/test_oss_omkar.py",
+      "change": "created",
+      "purpose": "Omkar output shapes, pagination, details, personal-field stripping and Shine network-guard lifetime."
+    },
+    {
+      "path": "backend/tests/test_oss_profiles.py",
+      "change": "created",
+      "purpose": "Profile schema, domain policy and unverified-route labeling."
+    },
+    {
+      "path": "backend/tests/test_oss_runtime.py",
+      "change": "created",
+      "purpose": "Subprocess limits, timeout cleanup, import side-effect boundary and ATS interpreter mapping."
+    },
+    {
+      "path": "oss-tools/licenses/ats-scrapers-LICENSE.txt",
+      "change": "created",
+      "purpose": "Preserved upstream license notice for the pinned source."
+    },
+    {
+      "path": "oss-tools/licenses/crawl4ai-LICENSE.txt",
+      "change": "created",
+      "purpose": "Preserved upstream license notice for the pinned source."
+    },
+    {
+      "path": "oss-tools/licenses/instahyre-scraper-LICENSE.txt",
+      "change": "created",
+      "purpose": "Preserved upstream license notice for the pinned source."
+    },
+    {
+      "path": "oss-tools/licenses/internshala-scraper-LICENSE.txt",
+      "change": "created",
+      "purpose": "Preserved upstream license notice for the pinned source."
+    },
+    {
+      "path": "oss-tools/licenses/JobSpy-LICENSE.txt",
+      "change": "created",
+      "purpose": "Preserved upstream license notice for the pinned source."
+    },
+    {
+      "path": "oss-tools/licenses/shine-scraper-LICENSE.txt",
+      "change": "created",
+      "purpose": "Preserved upstream license notice for the pinned source."
+    },
+    {
+      "path": "oss-tools/locks/ats-py311.lock.txt",
+      "change": "created",
+      "purpose": "Exact Windows Python 3.11 third-party requirement lock; local source commit is pinned in manifest."
+    },
+    {
+      "path": "oss-tools/locks/crawl4ai-py311.lock.txt",
+      "change": "created",
+      "purpose": "Exact Windows Python 3.11 third-party requirement lock; local source commit is pinned in manifest."
+    },
+    {
+      "path": "oss-tools/locks/instahyre-py311.lock.txt",
+      "change": "created",
+      "purpose": "Exact Windows Python 3.11 third-party requirement lock; local source commit is pinned in manifest."
+    },
+    {
+      "path": "oss-tools/locks/internshala-py311.lock.txt",
+      "change": "created",
+      "purpose": "Exact Windows Python 3.11 third-party requirement lock; local source commit is pinned in manifest."
+    },
+    {
+      "path": "oss-tools/locks/jobspy-py311.lock.txt",
+      "change": "created",
+      "purpose": "Exact Windows Python 3.11 third-party requirement lock; local source commit is pinned in manifest."
+    },
+    {
+      "path": "oss-tools/locks/shine-py311.lock.txt",
+      "change": "created",
+      "purpose": "Exact Windows Python 3.11 third-party requirement lock; local source commit is pinned in manifest."
+    },
+    {
+      "path": "oss-tools/manifest.json",
+      "change": "created",
+      "purpose": "Pin provenance, interpreter paths, installed versions and SHA-256 hashes for locks, licenses and browser binaries."
+    },
+    {
+      "path": "OSS_LUNA_CHANGED_FILES.json",
+      "change": "created",
+      "purpose": "File-by-file change inventory because the workspace has no Git repository."
+    },
+    {
+      "path": "OSS_LUNA_HANDOFF.md",
+      "change": "created",
+      "purpose": "Part 1 evidence, exact blockers and handoff ownership for Sol."
+    },
+    {
+      "path": "OSS_SOURCE_COVERAGE.json",
+      "change": "created",
+      "purpose": "Record 47 source targets and all 51 employer candidates, with access, mapping, runtime and probe evidence."
+    }
+  ]
+}

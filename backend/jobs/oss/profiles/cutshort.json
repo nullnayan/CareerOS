@@ -1,0 +1,31 @@
+{
+  "source_id": "cutshort",
+  "preferred_tool": "crawl4ai",
+  "official_url": "https://cutshort.io/jobs",
+  "approved_domains": ["cutshort.io"],
+  "entry_url": "https://cutshort.io/jobs",
+  "search_path_template": "/jobs/{role_slug}-jobs",
+  "role_aliases": {"software engineer": "software-development", "software developer": "software-development"},
+  "title_from_link": true,
+  "job_url_pattern": "/job/",
+  "query_parameters": {"location": "location"},
+  "scroll_steps": 2,
+  "page_ready_selector": "body",
+  "job_link_selectors": ["a[href*='/jobs/']", "a[href*='/job/']"],
+  "next_selectors": ["a[rel='next']", "a[aria-label*='Next']"],
+  "job_card_selector": "article, [class*='job-card'], [class*='job-listing']",
+  "title_selectors": ["h1", "h2", "h3", "[class*='title']"],
+  "company_selectors": ["h3 a[href*='/company/']", "h3", "[class*='company']"],
+  "location_selectors": ["[class*='location']"],
+  "description_selectors": ["[class*='description']", "main"],
+  "empty_indicators": ["no jobs found", "no openings", "no results"],
+  "login_indicators": ["sign in to continue", "log in to continue"],
+  "challenge_indicators": ["captcha", "verify you are human", "access denied", "challenge-platform"],
+  "max_pages": 3,
+  "max_details": 8,
+  "load_more_selector": null,
+  "robots_required": true,
+  "access_state": "unverified; direct access outcome must be checked before enabling"
+}
+
+

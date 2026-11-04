@@ -1,0 +1,9 @@
+{# partials/interests.html — v1 schema #}
+{% if data.interests and section_visible('interests') %}
+<div class="interests-section section-block">
+    <h2>Interests</h2>
+    <div class="skills-list">
+        {% for interest in data.interests %}{% if not interest | is_hidden %}{% if not loop.first %} &nbsp;•&nbsp; {% endif %}{{ interest.name }}{% if interest.keywords %} ({{ interest.keywords | join(', ') }}){% endif %}{% endif %}{% endfor %}
+    </div>
+</div>
+{% endif %}

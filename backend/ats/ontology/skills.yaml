@@ -1,0 +1,552 @@
+# skills.yaml — Expanded ontology: ~200 curated entries across tech, data, cloud,
+# soft skills, tools, certifications, finance, healthcare, marketing, and India-specific.
+# Seeded from ESCO/O*NET structure with a curated tech layer.
+# Each entry: id, canonical, kind, aliases, parents
+
+# ── Programming Languages ─────────────────────────────────────────────────────
+- id: python
+  canonical: Python
+  kind: hard
+  aliases: [python, python3, python 3, py]
+  parents: [programming]
+- id: javascript
+  canonical: JavaScript
+  kind: hard
+  aliases: [javascript, js, ecmascript, es6, es2015, es2020]
+  parents: [programming, frontend]
+- id: typescript
+  canonical: TypeScript
+  kind: hard
+  aliases: [typescript, ts]
+  parents: [programming, frontend]
+- id: java
+  canonical: Java
+  kind: hard
+  aliases: [java, core java, j2ee, java 8, java 11, java 17]
+  parents: [programming]
+- id: golang
+  canonical: Go
+  kind: hard
+  aliases: [go, golang, go lang]
+  parents: [programming]
+- id: rust
+  canonical: Rust
+  kind: hard
+  aliases: [rust, rust lang, rust-lang]
+  parents: [programming]
+- id: cpp
+  canonical: C++
+  kind: hard
+  aliases: [c++, cpp, c plus plus]
+  parents: [programming]
+- id: csharp
+  canonical: C#
+  kind: hard
+  aliases: [c#, csharp, c sharp, dotnet c#]
+  parents: [programming]
+- id: kotlin
+  canonical: Kotlin
+  kind: hard
+  aliases: [kotlin]
+  parents: [programming, mobile]
+- id: swift
+  canonical: Swift
+  kind: hard
+  aliases: [swift, swift 5]
+  parents: [programming, mobile]
+- id: ruby
+  canonical: Ruby
+  kind: hard
+  aliases: [ruby, ruby on rails, rails, ror]
+  parents: [programming]
+- id: php
+  canonical: PHP
+  kind: hard
+  aliases: [php, php 8, php7]
+  parents: [programming]
+- id: scala
+  canonical: Scala
+  kind: hard
+  aliases: [scala]
+  parents: [programming]
+- id: r_lang
+  canonical: R
+  kind: hard
+  aliases: [r language, r programming, rlang]
+  parents: [programming, data]
+- id: shell
+  canonical: Shell Scripting
+  kind: hard
+  aliases: [bash, shell, sh, zsh, shell scripting, bash scripting]
+  parents: [programming, devops]
+- id: sql
+  canonical: SQL
+  kind: hard
+  aliases: [sql, structured query language, t-sql, pl/sql, plsql, mysql, postgresql sql]
+  parents: [database]
+- id: matlab
+  canonical: MATLAB
+  kind: hard
+  aliases: [matlab]
+  parents: [programming, data]
+
+# ── Web Frameworks ────────────────────────────────────────────────────────────
+- id: react
+  canonical: React
+  kind: hard
+  aliases: [react, react.js, reactjs, react js]
+  parents: [javascript, frontend]
+- id: nextjs
+  canonical: Next.js
+  kind: hard
+  aliases: [next.js, nextjs, next js]
+  parents: [react, frontend]
+- id: vuejs
+  canonical: Vue.js
+  kind: hard
+  aliases: [vue.js, vuejs, vue js, vue 3]
+  parents: [javascript, frontend]
+- id: angular
+  canonical: Angular
+  kind: hard
+  aliases: [angular, angularjs, angular 2+, angular js]
+  parents: [javascript, frontend]
+- id: svelte
+  canonical: Svelte
+  kind: hard
+  aliases: [svelte, sveltekit]
+  parents: [javascript, frontend]
+- id: django
+  canonical: Django
+  kind: hard
+  aliases: [django, django rest framework, drf]
+  parents: [python, backend]
+- id: fastapi
+  canonical: FastAPI
+  kind: hard
+  aliases: [fastapi, fast api]
+  parents: [python, backend]
+- id: flask
+  canonical: Flask
+  kind: hard
+  aliases: [flask]
+  parents: [python, backend]
+- id: expressjs
+  canonical: Express.js
+  kind: hard
+  aliases: [express.js, expressjs, express js, express]
+  parents: [javascript, backend]
+- id: nestjs
+  canonical: NestJS
+  kind: hard
+  aliases: [nestjs, nest.js]
+  parents: [javascript, backend]
+- id: springboot
+  canonical: Spring Boot
+  kind: hard
+  aliases: [spring boot, springboot, spring framework, spring mvc]
+  parents: [java, backend]
+
+# ── Databases ─────────────────────────────────────────────────────────────────
+- id: postgresql
+  canonical: PostgreSQL
+  kind: hard
+  aliases: [postgresql, postgres, psql]
+  parents: [database]
+- id: mysql
+  canonical: MySQL
+  kind: hard
+  aliases: [mysql]
+  parents: [database]
+- id: mongodb
+  canonical: MongoDB
+  kind: hard
+  aliases: [mongodb, mongo]
+  parents: [database, nosql]
+- id: redis
+  canonical: Redis
+  kind: hard
+  aliases: [redis, redis cache]
+  parents: [database, cache]
+- id: elasticsearch
+  canonical: Elasticsearch
+  kind: hard
+  aliases: [elasticsearch, elastic search, opensearch]
+  parents: [database, search]
+- id: dynamodb
+  canonical: DynamoDB
+  kind: hard
+  aliases: [dynamodb, dynamo db, amazon dynamodb]
+  parents: [database, nosql, aws]
+- id: cassandra
+  canonical: Cassandra
+  kind: hard
+  aliases: [cassandra, apache cassandra]
+  parents: [database, nosql]
+- id: sqlite
+  canonical: SQLite
+  kind: hard
+  aliases: [sqlite]
+  parents: [database]
+- id: snowflake
+  canonical: Snowflake
+  kind: hard
+  aliases: [snowflake]
+  parents: [database, data_warehouse]
+- id: bigquery
+  canonical: BigQuery
+  kind: hard
+  aliases: [bigquery, google bigquery, bq]
+  parents: [database, data_warehouse, gcp]
+- id: redshift
+  canonical: Redshift
+  kind: hard
+  aliases: [redshift, amazon redshift, aws redshift]
+  parents: [database, data_warehouse, aws]
+
+# ── Cloud Platforms ───────────────────────────────────────────────────────────
+- id: aws
+  canonical: Amazon Web Services
+  kind: hard
+  aliases: [aws, amazon web services, amazon aws]
+  parents: [cloud]
+- id: gcp
+  canonical: Google Cloud Platform
+  kind: hard
+  aliases: [gcp, google cloud, google cloud platform]
+  parents: [cloud]
+- id: azure
+  canonical: Microsoft Azure
+  kind: hard
+  aliases: [azure, microsoft azure, azure cloud]
+  parents: [cloud]
+
+# ── DevOps & Infrastructure ───────────────────────────────────────────────────
+- id: docker
+  canonical: Docker
+  kind: tool
+  aliases: [docker, docker container, docker-compose, dockerfile]
+  parents: [devops]
+- id: kubernetes
+  canonical: Kubernetes
+  kind: tool
+  aliases: [kubernetes, k8s, kube]
+  parents: [devops]
+- id: terraform
+  canonical: Terraform
+  kind: tool
+  aliases: [terraform, tf, hashicorp terraform]
+  parents: [devops, iac]
+- id: ansible
+  canonical: Ansible
+  kind: tool
+  aliases: [ansible]
+  parents: [devops, iac]
+- id: jenkins
+  canonical: Jenkins
+  kind: tool
+  aliases: [jenkins]
+  parents: [devops, cicd]
+- id: github_actions
+  canonical: GitHub Actions
+  kind: tool
+  aliases: [github actions, gh actions]
+  parents: [devops, cicd]
+- id: gitlab_ci
+  canonical: GitLab CI
+  kind: tool
+  aliases: [gitlab ci, gitlab cicd, gitlab ci/cd]
+  parents: [devops, cicd]
+- id: prometheus
+  canonical: Prometheus
+  kind: tool
+  aliases: [prometheus]
+  parents: [devops, monitoring]
+- id: grafana
+  canonical: Grafana
+  kind: tool
+  aliases: [grafana]
+  parents: [devops, monitoring]
+- id: datadog
+  canonical: Datadog
+  kind: tool
+  aliases: [datadog]
+  parents: [devops, monitoring]
+
+# ── Data & ML ─────────────────────────────────────────────────────────────────
+- id: spark
+  canonical: Apache Spark
+  kind: hard
+  aliases: [spark, apache spark, pyspark]
+  parents: [data]
+- id: kafka
+  canonical: Apache Kafka
+  kind: hard
+  aliases: [kafka, apache kafka]
+  parents: [data, messaging]
+- id: airflow
+  canonical: Apache Airflow
+  kind: tool
+  aliases: [airflow, apache airflow]
+  parents: [data, orchestration]
+- id: dbt
+  canonical: dbt
+  kind: tool
+  aliases: [dbt, data build tool]
+  parents: [data]
+- id: tensorflow
+  canonical: TensorFlow
+  kind: hard
+  aliases: [tensorflow, tf, tensorflow 2]
+  parents: [ml, python]
+- id: pytorch
+  canonical: PyTorch
+  kind: hard
+  aliases: [pytorch, torch]
+  parents: [ml, python]
+- id: sklearn
+  canonical: Scikit-learn
+  kind: hard
+  aliases: [scikit-learn, sklearn, scikit learn]
+  parents: [ml, python]
+- id: pandas
+  canonical: Pandas
+  kind: hard
+  aliases: [pandas, pd]
+  parents: [data, python]
+- id: numpy
+  canonical: NumPy
+  kind: hard
+  aliases: [numpy, np]
+  parents: [data, python]
+- id: mlflow
+  canonical: MLflow
+  kind: tool
+  aliases: [mlflow, ml flow]
+  parents: [ml, mlops]
+- id: langchain
+  canonical: LangChain
+  kind: hard
+  aliases: [langchain, lang chain]
+  parents: [ml, llm]
+- id: huggingface
+  canonical: Hugging Face
+  kind: hard
+  aliases: [hugging face, huggingface, transformers]
+  parents: [ml, llm]
+- id: openai_api
+  canonical: OpenAI API
+  kind: tool
+  aliases: [openai, openai api, gpt-4, chatgpt api]
+  parents: [ml, llm]
+
+# ── Version Control & Collaboration ──────────────────────────────────────────
+- id: git
+  canonical: Git
+  kind: tool
+  aliases: [git, version control]
+  parents: [development]
+- id: github
+  canonical: GitHub
+  kind: tool
+  aliases: [github, gh]
+  parents: [development, git]
+- id: jira
+  canonical: Jira
+  kind: tool
+  aliases: [jira, atlassian jira]
+  parents: [project_management]
+- id: confluence
+  canonical: Confluence
+  kind: tool
+  aliases: [confluence, atlassian confluence]
+  parents: [project_management]
+- id: figma
+  canonical: Figma
+  kind: tool
+  aliases: [figma]
+  parents: [design]
+- id: postman
+  canonical: Postman
+  kind: tool
+  aliases: [postman]
+  parents: [development]
+
+# ── Methodologies ─────────────────────────────────────────────────────────────
+- id: agile
+  canonical: Agile
+  kind: soft
+  aliases: [agile, agile methodology, agile development]
+  parents: [methodology]
+- id: scrum
+  canonical: Scrum
+  kind: soft
+  aliases: [scrum, scrum master]
+  parents: [methodology, agile]
+- id: kanban
+  canonical: Kanban
+  kind: soft
+  aliases: [kanban]
+  parents: [methodology, agile]
+- id: tdd
+  canonical: TDD
+  kind: hard
+  aliases: [tdd, test driven development, test-driven development]
+  parents: [methodology]
+- id: ci_cd
+  canonical: CI/CD
+  kind: hard
+  aliases: [ci/cd, cicd, continuous integration, continuous deployment, continuous delivery]
+  parents: [devops]
+
+# ── Soft Skills ───────────────────────────────────────────────────────────────
+- id: leadership
+  canonical: Leadership
+  kind: soft
+  aliases: [leadership, team leadership, people management]
+  parents: [soft_skills]
+- id: communication
+  canonical: Communication
+  kind: soft
+  aliases: [communication, verbal communication, written communication]
+  parents: [soft_skills]
+- id: problem_solving
+  canonical: Problem Solving
+  kind: soft
+  aliases: [problem solving, problem-solving, analytical thinking]
+  parents: [soft_skills]
+- id: cross_functional
+  canonical: Cross-functional Collaboration
+  kind: soft
+  aliases: [cross-functional, cross functional, stakeholder management, cross team]
+  parents: [soft_skills]
+- id: mentoring
+  canonical: Mentoring
+  kind: soft
+  aliases: [mentoring, mentorship, coaching]
+  parents: [soft_skills]
+
+# ── Certifications ────────────────────────────────────────────────────────────
+- id: aws_ccp
+  canonical: AWS Certified Cloud Practitioner
+  kind: certification
+  aliases: [aws ccp, cloud practitioner, aws certified cloud practitioner]
+  parents: [aws, certification]
+- id: aws_saa
+  canonical: AWS Solutions Architect Associate
+  kind: certification
+  aliases: [aws saa, aws solutions architect, solutions architect associate]
+  parents: [aws, certification]
+- id: cka
+  canonical: Certified Kubernetes Administrator
+  kind: certification
+  aliases: [cka, certified kubernetes administrator]
+  parents: [kubernetes, certification]
+- id: gcp_ace
+  canonical: Google Cloud Associate Cloud Engineer
+  kind: certification
+  aliases: [gcp ace, google cloud engineer, associate cloud engineer]
+  parents: [gcp, certification]
+- id: az_900
+  canonical: Azure Fundamentals
+  kind: certification
+  aliases: [az-900, azure fundamentals, microsoft azure fundamentals]
+  parents: [azure, certification]
+- id: pmp
+  canonical: PMP
+  kind: certification
+  aliases: [pmp, project management professional]
+  parents: [project_management, certification]
+
+# ── Finance / Analytics ───────────────────────────────────────────────────────
+- id: excel
+  canonical: Microsoft Excel
+  kind: tool
+  aliases: [excel, ms excel, microsoft excel, advanced excel]
+  parents: [analytics]
+- id: tableau
+  canonical: Tableau
+  kind: tool
+  aliases: [tableau]
+  parents: [analytics, visualization]
+- id: power_bi
+  canonical: Power BI
+  kind: tool
+  aliases: [power bi, powerbi, microsoft power bi]
+  parents: [analytics, visualization]
+- id: financial_modelling
+  canonical: Financial Modelling
+  kind: hard
+  aliases: [financial modelling, financial modeling, financial model, dcf, valuation]
+  parents: [finance]
+- id: accounting
+  canonical: Accounting
+  kind: hard
+  aliases: [accounting, financial accounting, bookkeeping]
+  parents: [finance]
+
+# ── Healthcare ────────────────────────────────────────────────────────────────
+- id: patient_care
+  canonical: Patient Care
+  kind: hard
+  aliases: [patient care, patient management, clinical care]
+  parents: [healthcare]
+- id: emr
+  canonical: Electronic Medical Records
+  kind: tool
+  aliases: [emr, ehr, electronic medical records, electronic health records, epic, cerner]
+  parents: [healthcare]
+- id: bls
+  canonical: Basic Life Support
+  kind: certification
+  aliases: [bls, basic life support, cpr, cardiopulmonary resuscitation]
+  parents: [healthcare, certification]
+
+# ── Marketing / Growth ────────────────────────────────────────────────────────
+- id: seo
+  canonical: SEO
+  kind: hard
+  aliases: [seo, search engine optimization, search engine optimisation]
+  parents: [marketing]
+- id: google_ads
+  canonical: Google Ads
+  kind: tool
+  aliases: [google ads, google adwords, adwords, google analytics]
+  parents: [marketing]
+- id: content_marketing
+  canonical: Content Marketing
+  kind: hard
+  aliases: [content marketing, content strategy, copywriting]
+  parents: [marketing]
+- id: social_media
+  canonical: Social Media Marketing
+  kind: hard
+  aliases: [social media marketing, social media, instagram marketing, linkedin marketing]
+  parents: [marketing]
+
+# ── India-specific ────────────────────────────────────────────────────────────
+- id: tally
+  canonical: Tally
+  kind: tool
+  aliases: [tally, tally erp, tally erp 9, tally prime]
+  parents: [finance, india]
+- id: sap
+  canonical: SAP
+  kind: tool
+  aliases: [sap, sap erp, sap hana, sap s/4hana, sap fi, sap mm]
+  parents: [erp]
+- id: ms_office
+  canonical: Microsoft Office
+  kind: tool
+  aliases: [ms office, microsoft office, office 365, word excel powerpoint]
+  parents: [productivity]
+- id: autocad
+  canonical: AutoCAD
+  kind: tool
+  aliases: [autocad, auto cad, autodesk autocad]
+  parents: [engineering, design]
+- id: solidworks
+  canonical: SolidWorks
+  kind: tool
+  aliases: [solidworks, solid works]
+  parents: [engineering, design]

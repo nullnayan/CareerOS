@@ -1,0 +1,24 @@
+{# partials/projects.html — v1 schema #}
+{% if data.projects and section_visible('projects') %}
+<div class="projects-section section-block">
+    <h2>Projects</h2>
+    {% for proj in data.projects %}
+    {% if not proj | is_hidden %}
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">
+                {% if proj.url %}<a href="{{ proj.url }}">{{ proj.name }}</a>{% else %}{{ proj.name }}{% endif %}
+            </span>
+            {% if proj.period %}<span class="entry-meta">{{ proj.period }}</span>{% endif %}
+        </div>
+        {% if proj.technologies %}<div class="entry-subtitle">{{ proj.technologies | join(', ') }}</div>{% endif %}
+        {% if proj.bullets %}
+        <ul class="bullet-list">
+            {% for bullet in proj.bullets %}<li>{{ bullet }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,16 @@
+id: data_analyst
+titles: [data analyst, business analyst, analytics analyst, reporting analyst]
+family: data
+core_skills:
+  sql: 0.91
+  excel: 0.78
+  python: 0.64
+  tableau: 0.55
+  statistics: 0.41
+expected_sections: [experience, education, skills, projects]
+typical_evidence:
+  - dashboards delivered
+  - reports automated
+  - data volume processed
+  - stakeholders served
+title_progression: [junior data analyst, data analyst, senior data analyst, analytics lead]

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "CareerOS Application Assistant",
+  "version": "1.0.0",
+  "description": "Preview basic application fields, fill only selected empty inputs, and save a job to your local CareerOS workspace.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1:8010/*"],
+  "action": {"default_popup": "popup.html", "default_title": "CareerOS"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'"}
+}

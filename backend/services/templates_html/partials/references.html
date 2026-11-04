@@ -1,0 +1,17 @@
+{# partials/references.html — v1 schema #}
+{% if data.references and section_visible('references') %}
+<div class="references-section section-block">
+    <h2>References</h2>
+    {% for ref in data.references %}{% if not ref | is_hidden %}
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">{{ ref.name }}</span>
+            {% if ref.phone %}<span class="entry-meta">{{ ref.phone }}</span>{% endif %}
+        </div>
+        {% if ref.position %}<div class="entry-subtitle">{{ ref.position }}</div>{% endif %}
+        {% if ref.url %}<div><a href="{{ ref.url }}" style="font-size: calc(var(--font-size) - 0.5pt);">{{ ref.url }}</a></div>{% endif %}
+        {% if ref.description %}<p style="margin-top:2pt;">{{ ref.description }}</p>{% endif %}
+    </div>
+    {% endif %}{% endfor %}
+</div>
+{% endif %}

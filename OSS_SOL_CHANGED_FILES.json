@@ -1,0 +1,241 @@
+{
+  "files": [
+    {
+      "path": "backend/core/config.py",
+      "sha256": "46ce8eee79369e8c715eb7f62108c0a57012669584adf0b1d8bae1f3f62e4f44"
+    },
+    {
+      "path": "backend/jobs/engine.py",
+      "sha256": "b3c5ac799ebf259c28f07a24fcaa96fa96e264063f14d1e73aebe30dd0d03a8e"
+    },
+    {
+      "path": "backend/jobs/connectors.py",
+      "sha256": "c66dd8514a903955fc759417438a1342e12ae64f66b2cafd6cd3dbaebb454aea"
+    },
+    {
+      "path": "backend/jobs/adapters.py",
+      "sha256": "adab3a122ec646bfbdf128b132a776064054fc12080dbb1bc56e337ace1edcfd"
+    },
+    {
+      "path": "backend/jobs/scheduling.py",
+      "sha256": "bea5484881c7673de68df37dcdb7627c2e07178d5a6666e38fe329c09ab33fdb"
+    },
+    {
+      "path": "backend/jobs/verification.py",
+      "sha256": "85215d448141fd500af079438a074719ee2301259657d422381c985e8c53ba71"
+    },
+    {
+      "path": "backend/api/jobs.py",
+      "sha256": "89d0e9400142593870cd3f0a8fe673a98444830d138aab9eb7972a2f6861914c"
+    },
+    {
+      "path": "backend/automation/service.py",
+      "sha256": "c273bc7ccc30a0d388abae4b86a8fdfc666899af101018cde55c0bdb8b738b0b"
+    },
+    {
+      "path": "backend/jobs/oss/coordinator.py",
+      "sha256": "9d1a01507bd7233a9b20365a4de9436cf79be9d26a59c38f4af4022658dd7048"
+    },
+    {
+      "path": "backend/jobs/oss/runtime.py",
+      "sha256": "aa3c6a7fbd2795489b2658796734664ad536df45cafa6758b444aa99c1334725"
+    },
+    {
+      "path": "backend/jobs/oss/omkar_adapter.py",
+      "sha256": "daff87872932ffcbe1ce9daf18fff7f23cc6bbd9fcccca0dbd2450b4b397d2a7"
+    },
+    {
+      "path": "backend/jobs/oss/ats_adapter.py",
+      "sha256": "76745d6705d04deb81740af950479767f168f37d95862d71ab884165ea8c4142"
+    },
+    {
+      "path": "backend/jobs/oss/crawl_adapter.py",
+      "sha256": "88c5ce097e41c6e164e47e082126df40756d77991a755a771b70107656be481e"
+    },
+    {
+      "path": "backend/jobs/oss/crawl_extract.py",
+      "sha256": "2165deb07f35a038c91b94dfb36f91afd3cdce2f8b6e941a41f7232001b608e6"
+    },
+    {
+      "path": "backend/jobs/oss/runners/omkar_runner.py",
+      "sha256": "f0008e13b97870b4372e3041b5a8ce70a2603b67cd044e45e7bc99f679923f7e"
+    },
+    {
+      "path": "backend/jobs/oss/runners/ats_runner.py",
+      "sha256": "5f76239922d979db62ec09e914233cdf9a929cd2e9f5abab8e38cf7d869113a9"
+    },
+    {
+      "path": "backend/jobs/oss/runners/crawl4ai_runner.py",
+      "sha256": "b1e987f8db4900ec9bedaeddf57010e7aa3b08c56f8e324102f666d55ae52606"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "sha256": "722af1215189d550577d7b3e00e5410b063057f92da3529679ae90646f787e48"
+    },
+    {
+      "path": "backend/tests/test_oss_integration.py",
+      "sha256": "5d51d05efb9c9cd63ed381dd841328a5c5f189a990d35fab87588abe1b55c5af"
+    },
+    {
+      "path": "backend/tests/test_oss_isolated_runners.py",
+      "sha256": "04c67fd76b31517e68d1a7cf701e5df111ded126d72acd25851b484c9f3a6bb8"
+    },
+    {
+      "path": "frontend/app/jobs/oss-connections-panel.tsx",
+      "sha256": "eea96a06e98b86ab34f2b665b134477a164f41f1a8b88a570fd53964306bcdef"
+    },
+    {
+      "path": "frontend/app/jobs/page.tsx",
+      "sha256": "18f959cc7e6693d59731218600fc5164def8598e0317ac02e968259c9ec3e3e5"
+    },
+    {
+      "path": "frontend/app/lib/jobs.ts",
+      "sha256": "c36c75b65f6a52e3d477f2cf5fbbc362ccc616c28e27e9d364d784c445eb44c1"
+    },
+    {
+      "path": "backend/scratch/build_oss_ui_check.py",
+      "sha256": "00c6ee6c647aff451111fe8ad474c94f978e245d0f5e7fab81d472442df20fbe"
+    },
+    {
+      "path": "backend/scratch/verify_oss_discovery_ui.py",
+      "sha256": "cc537a37f65c181e1688a6de3ccf3834932914fa71009754463bf72afefda796"
+    },
+    {
+      "path": "backend/scripts/build_oss_part2_report.py",
+      "sha256": "edaff9882f142855d504ea60af5fd657fe16e0596444f37e246e01b336e9da74"
+    },
+    {
+      "path": "OSS_DISCOVERY_COVERAGE_PART2.json",
+      "sha256": "061e9f5f913095a5d6cf8e4f6a8b94e7f8123bb984943e6ca55dccd0ada9b3fd"
+    },
+    {
+      "path": "OSS_DISCOVERY_IMPLEMENTATION_REPORT.md",
+      "sha256": "0743258777dc2d1ef8329c2b5bf9de470bd4849e50df7dd5c532d15068386f8f"
+    },
+    {
+      "path": "OSS_DISCOVERY_OPERATING_GUIDE.md",
+      "sha256": "2d61754ccb07f1b7df6d0264d677b70c6d6f5b6120d2c29ab36f43b0185a9de3"
+    },
+    {
+      "path": "backend/jobs/oss/cancellation.py",
+      "sha256": "d6d8442f72db5a9a356a2037d64a285fa6670d54448f49af54115928c3bce703"
+    },
+    {
+      "path": "backend/jobs/search_control.py",
+      "sha256": "50292914943b370225dba102ea1bfc4bf025a492c5763851c15a9dc812a9cf11"
+    },
+    {
+      "path": "backend/api/automation.py",
+      "sha256": "cc741dba5a10e3b275da807d3741c068b59d7172d43ee2a963fedaf903fac1d1"
+    },
+    {
+      "path": "backend/jobs/schemas.py",
+      "sha256": "d7ce0ee390ad6cf392f347c5a7482e88c4bc19ca8a396343f010c1df150f9fe1"
+    },
+    {
+      "path": "backend/jobs/matching.py",
+      "sha256": "b6e2a0188f52e591437dae0e0481f20ae33339f8156de56015ff2e696c0def22"
+    },
+    {
+      "path": "backend/jobs/service.py",
+      "sha256": "f86c6c4ee806558a0adcec3ef21d867bd02028468638d2ce5e1d3b6788dc6cde"
+    },
+    {
+      "path": "backend/jobs/oss/contracts.py",
+      "sha256": "d8c281630b5ded30e553110853bb68d03e9071a5480d8b76f69206242ffcb1a0"
+    },
+    {
+      "path": "backend/jobs/oss/normalize.py",
+      "sha256": "908a0fb0979763e8a22b646ee8246104146d090cefad9882d30e5a0e54fe0d8e"
+    },
+    {
+      "path": "backend/jobs/oss/jobspy_adapter.py",
+      "sha256": "ac1512c2c5ec3e5119910e61c433dd90a4910e4701a280a5055ae6e546ae2cae"
+    },
+    {
+      "path": "backend/jobs/oss/runners/jobspy_runner.py",
+      "sha256": "f44e094e4e76067c9d695b13fa7415b8410df56db54f5ee20e4e9a4fc8d7e952"
+    },
+    {
+      "path": "backend/scripts/probe_jobspy_pages.py",
+      "sha256": "4d77ca38201e20cf691fb786111d9796d62eea91eb7b5ead54696d29159081a0"
+    },
+    {
+      "path": "backend/tests/test_oss_search_filters.py",
+      "sha256": "8e7635704d63e00e67a5119bf4b783d7b36397bf69a9885113158040e6f4a55e"
+    },
+    {
+      "path": "backend/tests/test_oss_runtime.py",
+      "sha256": "865b42f83d58cacade6ad8189c9f8e0cc0a89f41f22eb12d40fbfe82b9a12157"
+    },
+    {
+      "path": "backend/tests/test_automation.py",
+      "sha256": "ee51ad0e36d49a72e46cad2edfcc7d11a49996b2550d912b2a60e559b8d0f63f"
+    },
+    {
+      "path": "backend/tests/test_search_architecture.py",
+      "sha256": "d4e9be6a309d8b9a512dc695f59f299815b560ef875c0636c4cc3fe709b19bf0"
+    },
+    {
+      "path": "frontend/app/automation/page.tsx",
+      "sha256": "d7d83cbba2fb7e0eb9a4983d0344f843c8f82813e7dacfc4fcbb5ae22156330e"
+    },
+    {
+      "path": "SEARCH_PIPELINE_FIXES.md",
+      "sha256": "8241b7c8b321ac75af64b649f12889c07b6cfe6bca3af03e74f358fa8d59c301"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/accenture.json",
+      "sha256": "2c8f744090a4f8d3dd77610be331e365a90e95a5df3c934b4a529bb605eb761a"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/cognizant.json",
+      "sha256": "70f7d0745461f886646589a3da726b8778facdd6d0474b4e4debfcb91f75c28b"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/company_portal.template.json",
+      "sha256": "02bcc87ebc8b20b1f7c518cf13e79525b9701af83ce9644d4f26c9c5a328b9ac"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/cutshort.json",
+      "sha256": "6618286d284a5ede0251d7cd1aba66203411f3adb8465bd8bcde7466878af574"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/cuvette.json",
+      "sha256": "2e53d325cf5e30fdc4ebea53f5d71e52b20fed379aaccb106a1e3f563d5ccd25"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/deloitte.json",
+      "sha256": "640154f411a1b6bad3a8f3bbb777d3ed8827b599f70d874039759ad67c5a3c7b"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/foundit.json",
+      "sha256": "105b43168061e17354017e86773b50ccaee95254204b9b62c480de4223bfe5ce"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/infosys.json",
+      "sha256": "1d426a9e4e09ad1843912441bf16113d8652c838922504f5fdb068f46d95d762"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/superset.json",
+      "sha256": "7ffc17dc6dd9a845cd86f8cd68de25153b900e327101205ac4ba0a91ac873509"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/tcs.json",
+      "sha256": "d1dbcf379d59e26c9691ee726d3a7b17b09053571acc74095baa226494995e92"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/unstop.json",
+      "sha256": "ed9d773529ac72999f8293a4c14d02f42e36cf53a1396f4537358d53590b31da"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/wellfound.json",
+      "sha256": "c6b5cc131bfe1aed1a2e0fabd90c7041645b511dcc7301318c664042e6f760b4"
+    },
+    {
+      "path": "backend/jobs/oss/profiles/wipro.json",
+      "sha256": "b169c87c92d5b1d103fd2d7be356c6cb37c29ef76e233c09dd6aae04096ed136"
+    }
+  ],
+  "note": "Final file hashes; workspace has no git diff. Excludes generated runtimes/builds/logs."
+}

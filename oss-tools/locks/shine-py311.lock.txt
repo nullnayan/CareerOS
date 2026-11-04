@@ -1,0 +1,11 @@
+# Windows Python 3.11 lock: shine
+# Exact installed third-party distributions; local source commit is pinned in manifest.json.
+bottle==0.13.4
+certifi==2026.10.23
+cffi==2.1.1
+cheroot==11.1.2
+curl_cffi==0.17.0
+jaraco.functools==4.6.0
+marshmallow==4.3.1
+more-itertools==11.2.1
+pycparser==3.12

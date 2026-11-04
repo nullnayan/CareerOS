@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────
+   Tokens — editorial / paper
+   Channel triplets so Tailwind can apply /opacity modifiers.
+   ─────────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    /* Local workspace must build and render without contacting Google Fonts. */
+    --font-sans: Arial, Helvetica;
+    --font-serif: Georgia, "Times New Roman";
+    /* Surfaces */
+    --paper: 252 252 250;
+    --surface: 255 255 255;
+    --sunken: 244 243 240;
+
+    /* Ink */
+    --ink: 16 16 16;
+    --ink-secondary: 82 80 75;
+    --ink-tertiary: 138 134 126;
+
+    /* Rules */
+    --rule: 230 227 221;
+    --rule-strong: 212 208 200;
+
+    /* The one accent */
+    --accent: 27 77 155;
+    --accent-hover: 21 60 122;
+    --on-accent: 255 255 255;
+
+    /* Semantic — print-ink, used at text weight */
+    --good: 30 111 75;
+    --warn: 138 90 0;
+    --bad: 163 34 34;
+
+    --radius: 4px;
+    --radius-panel: 8px;
+  }
+}
+
+@layer base {
+  html {
+    background-color: rgb(var(--paper));
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: rgb(var(--ink));
+  }
+
+  /* Numerals always align in tables and score readouts */
+  table,
+  time,
+  [data-numeric] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  hr {
+    @apply border-0 border-t border-rule;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.16);
+  }
+
+  /* One focus treatment, everywhere */
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::placeholder {
+    color: rgb(var(--ink-tertiary));
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Scrollbar — quiet
+   ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--rule-strong));
+  border: 3px solid rgb(var(--paper));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--ink-tertiary));
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Motion — state change only
+   ─────────────────────────────────────────────────────────────── */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 120ms ease-out both;
+}
+
+/* Indeterminate progress rail, used by the app-boot screen */
+@keyframes rail {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+.animate-rail {
+  animation: rail 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse-quiet {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+.animate-pulse-quiet {
+  animation: pulse-quiet 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Print-diff washes — used by the tailor diff view.
+   Underline/strikethrough carries the meaning; color only supports it.
+   ─────────────────────────────────────────────────────────────── */
+.diff-add {
+  background: rgb(var(--good) / 0.08);
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--good) / 0.5);
+  text-underline-offset: 2px;
+}
+.diff-del {
+  background: rgb(var(--bad) / 0.07);
+  text-decoration: line-through;
+  text-decoration-color: rgb(var(--bad) / 0.5);
+  color: rgb(var(--ink-tertiary));
+}

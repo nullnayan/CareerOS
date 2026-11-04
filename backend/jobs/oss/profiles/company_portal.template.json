@@ -1,0 +1,23 @@
+{
+  "profile_type": "company_portal_template",
+  "preferred_tool": "crawl4ai",
+  "approved_domains": [],
+  "entry_url": null,
+  "query_parameters": {"query": "role", "location": "location"},
+  "page_ready_selector": "body",
+  "job_link_selectors": ["a[href*='/jobs/']", "a[href*='/job/']", "a[href*='/careers/']"],
+  "next_selectors": ["a[rel='next']", "a[aria-label*='Next']"],
+  "job_card_selector": "article, [class*='job-card'], [class*='job-listing']",
+  "title_selectors": ["h1", "h2", "h3", "[class*='title']"],
+  "company_selectors": ["[class*='company']"],
+  "location_selectors": ["[class*='location']"],
+  "description_selectors": ["[class*='description']", "main"],
+  "empty_indicators": ["no jobs found", "no openings", "no results"],
+  "login_indicators": ["sign in to continue", "log in to continue"],
+  "challenge_indicators": ["captcha", "verify you are human", "access denied", "challenge-platform"],
+  "max_pages": 3,
+  "max_details": 8,
+  "load_more_selector": null,
+  "robots_required": true,
+  "access_state": "planned; must be instantiated with an employer-reviewed exact domain and fixture-tested extraction profile before use"
+}

@@ -1,0 +1,3 @@
+@echo off
+echo Starting CareerOS background worker...
+.\venv\Scripts\python.exe -m automation.worker

@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block styles %}
+.page-container {
+    padding: 0;
+    display: flex;
+    height: 100%;
+}
+
+/* ── Sidebar ──────────────────────────── */
+.sidebar {
+    width: var(--sidebar-width, 30%);
+    background: var(--primary);
+    padding: var(--margin-y) calc(var(--margin-x) * 0.7);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12pt;
+}
+
+.sidebar h1 {
+    font-size: calc(var(--font-size) + 12pt);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 4pt;
+}
+
+.sidebar .headline {
+    font-size: calc(var(--font-size) - 0.5pt);
+    color: rgba(255,255,255,0.80);
+    margin-bottom: 8pt;
+}
+
+.sidebar h2 {
+    font-size: calc(var(--font-size) + 1pt);
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 1pt solid rgba(255,255,255,0.3);
+    padding-bottom: 3pt;
+    margin-bottom: 6pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+
+.sidebar .contact-item {
+    font-size: calc(var(--font-size) - 0.5pt);
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 3pt;
+    word-break: break-all;
+}
+.sidebar .contact-item a { color: rgba(255,255,255,0.85); }
+
+.skill-pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    border-radius: 10pt;
+    padding: 2pt 7pt;
+    margin: 2pt 2pt 2pt 0;
+    font-size: calc(var(--font-size) - 1pt);
+}
+
+.sidebar .lang-item { color: rgba(255,255,255,0.85); font-size: calc(var(--font-size) - 0.5pt); margin-bottom: 3pt; }
+
+/* ── Main ─────────────────────────────── */
+.main-content {
+    flex: 1;
+    padding: var(--margin-y) var(--margin-x);
+    overflow: hidden;
+}
+
+.main-content h2 {
+    font-size: calc(var(--font-size) + 2pt);
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    border-bottom: 1pt solid var(--primary);
+    padding-bottom: 2pt;
+}
+
+.section-block { margin-bottom: 8pt; }
+.entry { margin-bottom: 8pt; }
+.entry-title { font-weight: 700; color: var(--heading); }
+.entry-meta { float: right; font-size: calc(var(--font-size) - 1pt); color: #94a3b8; }
+.entry-subtitle { color: #64748b; margin-bottom: 2pt; }
+.entry-subtitle-right { float: right; font-size: calc(var(--font-size) - 1pt); font-style: italic; }
+.skills-list { margin-bottom: 8pt; }
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+
+    <!-- ── Sidebar ────────────────────────────────────────────────── -->
+    <div class="sidebar">
+        {% if data.photo and not data.photo.hidden and data.photo.url %}
+        <div class="photo-container" style="margin: 0 auto 10pt auto;">
+            <img src="{{ data.photo.url }}" alt="Profile Photo" />
+        </div>
+        {% endif %}
+
+        <div>
+            <h1>{{ data.contact.name }}</h1>
+            {% if data.contact.headline %}<div class="headline">{{ data.contact.headline }}</div>{% endif %}
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h2>Contact</h2>
+            {% if data.contact.email %}<div class="contact-item"><a href="mailto:{{ data.contact.email }}">{{ data.contact.email }}</a></div>{% endif %}
+            {% if data.contact.phone %}<div class="contact-item">{{ data.contact.phone }}</div>{% endif %}
+            {% if data.contact.location %}<div class="contact-item">{{ data.contact.location }}</div>{% endif %}
+            {% if data.contact.website %}<div class="contact-item"><a href="{{ data.contact.website }}">{{ data.contact.website }}</a></div>{% endif %}
+            {% for profile in data.profiles %}{% if not profile | is_hidden %}
+            <div class="contact-item"><a href="{{ profile.url }}">{{ profile.network or profile.username or profile.url }}</a></div>
+            {% endif %}{% endfor %}
+        </div>
+
+        <!-- Skills (always in sidebar for Modern Tech) -->
+        {% set visible_skills = data.skills | selectattr('hidden', 'equalto', false) | list if data.skills else [] %}
+        {% if visible_skills %}
+        <div>
+            <h2>Skills</h2>
+            {% for skill in visible_skills %}
+            <span class="skill-pill">{{ skill.name }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Languages (always in sidebar for Modern Tech) -->
+        {% if data.languages %}
+        <div>
+            <h2>Languages</h2>
+            {% for lang in data.languages %}{% if not lang | is_hidden %}
+            <div class="lang-item">
+                {{ lang.language }}{% if lang.fluency %} <span style="opacity:0.7">— {{ lang.fluency }}</span>{% endif %}
+            </div>
+            {% endif %}{% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- ── Main Content ───────────────────────────────────────────── -->
+    <div class="main-content">
+
+        {% if data.summary and section_visible('summary') %}
+        <div class="section-block">
+            <h2>Summary</h2>
+            <p>{{ data.summary }}</p>
+        </div>
+        {% endif %}
+
+        {# For Modern Tech, skills & languages live in sidebar — skip them in the main loop #}
+        {% for key in section_order %}
+            {% if key == 'experience' %}{% include "partials/experience.html" %}
+            {% elif key == 'education' %}{% include "partials/education.html" %}
+            {% elif key == 'projects' %}{% include "partials/projects.html" %}
+            {% elif key == 'certifications' %}{% include "partials/certifications.html" %}
+            {% elif key == 'awards' %}{% include "partials/awards.html" %}
+            {% elif key == 'publications' %}{% include "partials/publications.html" %}
+            {% elif key == 'volunteer' %}{% include "partials/volunteer.html" %}
+            {% elif key == 'interests' %}{% include "partials/interests.html" %}
+            {% elif key == 'references' %}{% include "partials/references.html" %}
+            {% elif key == 'custom_sections' %}{% include "partials/custom_sections.html" %}
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

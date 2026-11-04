@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block styles %}
+.page-container { padding: var(--margin-y) var(--margin-x); }
+
+/* Academic keeps serif feel */
+h1 {
+    font-size: calc(var(--font-size) + 14pt);
+    font-weight: 700;
+    color: var(--heading);
+    text-align: center;
+    margin-bottom: 4pt;
+}
+
+.headline {
+    font-size: calc(var(--font-size) + 0.5pt);
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 4pt;
+}
+
+.contact-info {
+    font-size: calc(var(--font-size) - 1pt);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    gap: 10pt;
+    flex-wrap: wrap;
+    margin-bottom: 12pt;
+    border-bottom: 1pt solid var(--heading);
+    padding-bottom: 8pt;
+}
+
+.section-block { margin-bottom: 8pt; }
+
+h2 {
+    font-size: calc(var(--font-size) + 2pt);
+    font-weight: 700;
+    color: var(--heading);
+    margin-top: 10pt;
+    margin-bottom: 6pt;
+    text-align: center;
+    border-bottom: 1pt solid #94a3b8;
+    padding-bottom: 2pt;
+}
+
+.entry { margin-bottom: 10pt; }
+.entry-title { font-weight: 700; color: var(--heading); }
+.entry-meta { float: right; font-size: calc(var(--font-size) - 1pt); color: var(--text); }
+.entry-subtitle { font-style: italic; color: var(--text); margin-bottom: 2pt; }
+.entry-subtitle-right { float: right; font-size: calc(var(--font-size) - 1pt); font-style: italic; }
+.skills-list { margin-bottom: 8pt; text-align: center; }
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+
+    <!-- ── Header ─────────────────────────────────────────────────── -->
+    {% if data.photo and not data.photo.hidden and data.photo.url %}
+    <div style="text-align:center; margin-bottom: 10pt;">
+        <div class="photo-container" style="margin: 0 auto;">
+            <img src="{{ data.photo.url }}" alt="Profile Photo" />
+        </div>
+    </div>
+    {% endif %}
+
+    <h1>{{ data.contact.name }}</h1>
+    {% if data.contact.headline %}<div class="headline">{{ data.contact.headline }}</div>{% endif %}
+
+    <div class="contact-info">
+        {% if data.contact.email %}<span><a href="mailto:{{ data.contact.email }}">{{ data.contact.email }}</a></span>{% endif %}
+        {% if data.contact.phone %}<span>{{ data.contact.phone }}</span>{% endif %}
+        {% if data.contact.location %}<span>{{ data.contact.location }}</span>{% endif %}
+        {% if data.contact.website %}<span><a href="{{ data.contact.website }}">{{ data.contact.website }}</a></span>{% endif %}
+        {% for profile in data.profiles %}{% if not profile | is_hidden %}
+        <span><a href="{{ profile.url }}">{{ profile.network or profile.username or profile.url }}</a></span>
+        {% endif %}{% endfor %}
+    </div>
+
+    <!-- ── Summary / Objective ────────────────────────────────────── -->
+    {% if data.summary and section_visible('summary') %}
+    <div class="section-block">
+        <h2>Research Interests</h2>
+        <p>{{ data.summary }}</p>
+    </div>
+    {% endif %}
+
+    <!-- ── Ordered Sections ───────────────────────────────────────── -->
+    {% for key in section_order %}
+        {% if key == 'experience' %}{% include "partials/experience.html" %}
+        {% elif key == 'education' %}{% include "partials/education.html" %}
+        {% elif key == 'projects' %}{% include "partials/projects.html" %}
+        {% elif key == 'skills' %}{% include "partials/skills.html" %}
+        {% elif key == 'languages' %}{% include "partials/languages.html" %}
+        {% elif key == 'certifications' %}{% include "partials/certifications.html" %}
+        {% elif key == 'awards' %}{% include "partials/awards.html" %}
+        {% elif key == 'publications' %}{% include "partials/publications.html" %}
+        {% elif key == 'volunteer' %}{% include "partials/volunteer.html" %}
+        {% elif key == 'interests' %}{% include "partials/interests.html" %}
+        {% elif key == 'references' %}{% include "partials/references.html" %}
+        {% elif key == 'custom_sections' %}{% include "partials/custom_sections.html" %}
+        {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock %}

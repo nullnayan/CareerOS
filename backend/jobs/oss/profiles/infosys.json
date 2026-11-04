@@ -1,0 +1,31 @@
+{
+  "source_id": "infosys",
+  "preferred_tool": "crawl4ai",
+  "official_url": "https://www.infosys.com/careers/apply.html",
+  "entry_url": "https://career.infosys.com/joblist?companyhiringtype=IL&countrycode=IN",
+  "title_from_link": true,
+  "job_url_pattern": "/(?:jobdesc|jobdescription|jobdetails)/",
+  "approved_domains": ["infosys.com"],
+  "company_fallback": "Infosys",
+  "query_parameters": {"q": "role", "location": "location"},
+  "search_interaction": "GET query parameters; unverified; entry page may link to a separate candidate system",
+  "scroll_steps": 2,
+  "page_ready_selector": "body",
+  "job_link_selectors": ["a[href*='/jobdesc']", "a[href*='/jobdescription']", "a[href*='/jobdetails']"],
+  "next_selectors": ["a[rel='next']", "a[aria-label*='Next']"],
+  "job_card_selector": "article, [class*='job-card'], [class*='job-listing']",
+  "title_selectors": ["h1", "h2", "h3", "[class*='title']"],
+  "company_selectors": ["[class*='company']"],
+  "location_selectors": ["[class*='location']"],
+  "description_selectors": ["[class*='description']", "main"],
+  "empty_indicators": ["no jobs found", "no openings", "no results"],
+  "login_indicators": ["sign in to continue", "log in to continue"],
+  "challenge_indicators": ["captcha", "verify you are human", "access denied", "challenge-platform"],
+  "max_pages": 2,
+  "max_details": 2,
+  "load_more_selector": null,
+  "robots_required": true,
+  "access_state": "official careers URL identified; public search route and regional/programme scope unverified"
+}
+
+

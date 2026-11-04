@@ -1,0 +1,25 @@
+{# partials/experience.html — v1 schema #}
+{% if data.experience and section_visible('experience') %}
+<div class="experience-section section-block">
+    <h2>Experience</h2>
+    {% for exp in data.experience %}
+    {% if not exp | is_hidden %}
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">{{ exp.position or exp.title or '' }}</span>
+            <span class="entry-meta">{{ exp.start_date }}{% if exp.end_date %} – {{ exp.end_date }}{% endif %}</span>
+        </div>
+        <div style="margin-bottom: 2pt;">
+            <span class="entry-subtitle">{{ exp.company }}</span>
+            {% if exp.location %}<span class="entry-subtitle-right">{{ exp.location }}</span>{% endif %}
+        </div>
+        {% if exp.bullet_points %}
+        <ul class="bullet-list">
+            {% for bullet in exp.bullet_points %}<li>{{ bullet }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

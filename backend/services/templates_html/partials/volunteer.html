@@ -1,0 +1,16 @@
+{# partials/volunteer.html — v1 schema #}
+{% if data.volunteer and section_visible('volunteer') %}
+<div class="volunteer-section section-block">
+    <h2>Volunteer</h2>
+    {% for vol in data.volunteer %}{% if not vol | is_hidden %}
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">{{ vol.position }}</span>
+            {% if vol.period %}<span class="entry-meta">{{ vol.period }}</span>{% endif %}
+        </div>
+        <div class="entry-subtitle">{{ vol.organization }}{% if vol.location %} — {{ vol.location }}{% endif %}</div>
+        {% if vol.description %}<p style="margin-top:2pt;">{{ vol.description }}</p>{% endif %}
+    </div>
+    {% endif %}{% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,30 @@
+{
+  "source_id": "accenture",
+  "primary_ats_url": "https://accenture.wd103.myworkdayjobs.com/accenturecareers",
+  "preferred_tool": "crawl4ai",
+  "official_url": "https://www.accenture.com/in-en/careers",
+  "entry_url": "https://www.accenture.com/in-en/careers/jobsearch",
+  "approved_domains": ["accenture.com"],
+  "company_fallback": "Accenture",
+  "query_parameters": {"q": "role", "location": "location"},
+  "search_interaction": "GET query parameters; unverified; Workday tenant was not inferred from a company name",
+  "scroll_steps": 2,
+  "page_ready_selector": "body",
+  "job_link_selectors": ["a[href*='/careers/jobdetails']", "a[href*='/jobs/']", "a[href*='jobdetails']"],
+  "next_selectors": ["a[rel='next']", "a[aria-label*='Next']"],
+  "job_card_selector": "article, [class*='job-card'], [class*='job-listing']",
+  "title_selectors": ["h1", "h2", "h3", "[class*='title']"],
+  "company_selectors": ["[class*='company']"],
+  "location_selectors": ["[class*='location']"],
+  "description_selectors": ["[class*='description']", "main"],
+  "empty_indicators": ["no jobs found", "no openings", "no results"],
+  "login_indicators": ["sign in to continue", "log in to continue"],
+  "challenge_indicators": ["captcha", "verify you are human", "access denied", "challenge-platform"],
+  "max_pages": 2,
+  "max_details": 2,
+  "load_more_selector": null,
+  "robots_required": true,
+  "access_state": "official India careers URL identified; current Workday tenant, experienced/graduate programme split and query route unverified"
+}
+
+

@@ -1,0 +1,12 @@
+- id: software_engineer
+  normalized: software_engineer
+  titles: [software engineer, swe, programmer, developer, sde, software developer]
+- id: data_analyst
+  normalized: data_analyst
+  titles: [data analyst, business analyst, analytics analyst, reporting analyst]
+- id: product_manager
+  normalized: product_manager
+  titles: [product manager, pm, senior product manager, group product manager]
+- id: registered_nurse
+  normalized: registered_nurse
+  titles: [registered nurse, rn, staff nurse, clinical nurse]

@@ -1,0 +1,14 @@
+{# partials/awards.html — v1 schema — objects with title/awarder/date/description/hidden #}
+{% if data.awards and section_visible('awards') %}
+<div class="awards-section section-block">
+    <h2>Awards &amp; Achievements</h2>
+    <ul class="bullet-list">
+        {% for award in data.awards %}{% if not award | is_hidden %}
+        <li>
+            <strong>{{ award.title }}</strong>{% if award.awarder %} — {{ award.awarder }}{% endif %}{% if award.date %} ({{ award.date }}){% endif %}
+            {% if award.description %}<br><span style="font-size: calc(var(--font-size) - 0.5pt);">{{ award.description }}</span>{% endif %}
+        </li>
+        {% endif %}{% endfor %}
+    </ul>
+</div>
+{% endif %}

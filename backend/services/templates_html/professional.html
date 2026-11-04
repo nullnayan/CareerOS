@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block styles %}
+.page-container { padding: var(--margin-y) var(--margin-x); }
+.header-section { margin-bottom: 16pt; display: flex; align-items: center; gap: 16pt; }
+.header-content { flex-grow: 1; }
+
+h1 {
+    font-size: calc(var(--font-size) + 18pt);
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 4pt;
+    font-variant: small-caps;
+}
+
+.headline {
+    font-size: calc(var(--font-size) + 0.5pt);
+    color: var(--primary);
+    margin-bottom: 4pt;
+    font-variant: small-caps;
+}
+
+.contact-info { font-size: var(--font-size); color: var(--text); }
+.contact-info span::after { content: " | "; color: #94a3b8; margin: 0 4pt; }
+.contact-info span:last-child::after { content: ""; }
+
+.section-block { margin-bottom: 8pt; }
+
+h2 {
+    font-size: calc(var(--font-size) + 2pt);
+    font-weight: 700;
+    color: var(--heading);
+    font-variant: small-caps;
+    letter-spacing: 0.5pt;
+    margin-top: 12pt;
+    margin-bottom: 8pt;
+    border-bottom: 2pt solid var(--heading);
+    padding-bottom: 2pt;
+}
+
+.entry { margin-bottom: 10pt; }
+.entry-title { font-weight: 700; color: var(--heading); }
+.entry-meta { float: right; font-weight: 600; color: var(--heading); font-size: calc(var(--font-size) - 1pt); }
+.entry-subtitle { font-style: italic; color: var(--text); margin-bottom: 4pt; }
+.entry-subtitle-right { float: right; font-size: calc(var(--font-size) - 1pt); font-style: italic; }
+.skills-list { margin-bottom: 8pt; }
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+
+    <!-- ── Header ─────────────────────────────────────────────────── -->
+    <div class="header-section">
+        {% if data.photo and not data.photo.hidden and data.photo.url %}
+        <div class="photo-container">
+            <img src="{{ data.photo.url }}" alt="Profile Photo" />
+        </div>
+        {% endif %}
+        <div class="header-content">
+            <h1>{{ data.contact.name }}</h1>
+            {% if data.contact.headline %}<div class="headline">{{ data.contact.headline }}</div>{% endif %}
+            <div class="contact-info">
+                {% if data.contact.email %}<span><a href="mailto:{{ data.contact.email }}">{{ data.contact.email }}</a></span>{% endif %}
+                {% if data.contact.phone %}<span>{{ data.contact.phone }}</span>{% endif %}
+                {% if data.contact.location %}<span>{{ data.contact.location }}</span>{% endif %}
+                {% if data.contact.website %}<span><a href="{{ data.contact.website }}">{{ data.contact.website }}</a></span>{% endif %}
+                {% for profile in data.profiles %}{% if not profile | is_hidden %}
+                <span><a href="{{ profile.url }}">{{ profile.network or profile.username or profile.url }}</a></span>
+                {% endif %}{% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Summary ────────────────────────────────────────────────── -->
+    {% if data.summary and section_visible('summary') %}
+    <div class="section-block">
+        <h2>Summary</h2>
+        <p>{{ data.summary }}</p>
+    </div>
+    {% endif %}
+
+    <!-- ── Ordered Sections ───────────────────────────────────────── -->
+    {% for key in section_order %}
+        {% if key == 'experience' %}{% include "partials/experience.html" %}
+        {% elif key == 'education' %}{% include "partials/education.html" %}
+        {% elif key == 'projects' %}{% include "partials/projects.html" %}
+        {% elif key == 'skills' %}{% include "partials/skills.html" %}
+        {% elif key == 'languages' %}{% include "partials/languages.html" %}
+        {% elif key == 'certifications' %}{% include "partials/certifications.html" %}
+        {% elif key == 'awards' %}{% include "partials/awards.html" %}
+        {% elif key == 'publications' %}{% include "partials/publications.html" %}
+        {% elif key == 'volunteer' %}{% include "partials/volunteer.html" %}
+        {% elif key == 'interests' %}{% include "partials/interests.html" %}
+        {% elif key == 'references' %}{% include "partials/references.html" %}
+        {% elif key == 'custom_sections' %}{% include "partials/custom_sections.html" %}
+        {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock %}

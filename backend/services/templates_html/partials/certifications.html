@@ -1,0 +1,13 @@
+{# partials/certifications.html — v1 schema — objects with title/issuer/date/url/hidden #}
+{% if data.certifications and section_visible('certifications') %}
+<div class="certifications-section section-block">
+    <h2>Certifications</h2>
+    <ul class="bullet-list">
+        {% for cert in data.certifications %}{% if not cert | is_hidden %}
+        <li>
+            {{ cert.title }}{% if cert.issuer %} — {{ cert.issuer }}{% endif %}{% if cert.date %} ({{ cert.date }}){% endif %}
+        </li>
+        {% endif %}{% endfor %}
+    </ul>
+</div>
+{% endif %}

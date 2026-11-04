@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Raleway:wght@400;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&family=Noto+Sans:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Crimson+Text:wght@400;600;700&family=Josefin+Sans:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+        :root {
+            /* Design Tokens */
+            --primary: {{ (design.primary_color if design and design.primary_color else '#2563eb') }};
+            --text: {{ (design.text_color if design and design.text_color else '#1a1a1a') }};
+            --heading: {{ (design.text_color if design and design.text_color else '#1a1a1a') }};
+            --background: {{ (design.background_color if design and design.background_color else '#ffffff') }};
+            --font-family: '{{ (design.font_family if design and design.font_family else "Inter") }}', sans-serif;
+            --font-size: {{ (design.font_size if design and design.font_size else 10) }}pt;
+            --line-height: {{ (design.line_height if design and design.line_height else 1.4) }};
+            --margin-x: {{ (design.margin_x if design and design.margin_x else 36) }}pt;
+            --margin-y: {{ (design.margin_y if design and design.margin_y else 36) }}pt;
+            --sidebar-width: {{ (design.sidebar_width if design and design.sidebar_width else 30) }}%;
+            
+            /* Photo Tokens */
+            --photo-size: {{ (data.photo.size if data and data.photo and data.photo.size else 80) }}pt;
+            --photo-radius: {{ (data.photo.border_radius if data and data.photo and data.photo.border_radius is defined else 50) }}%;
+            --photo-border-width: {{ (data.photo.border_width if data and data.photo and data.photo.border_width is defined else 0) }}pt;
+            --photo-border-color: {{ (data.photo.border_color if data and data.photo and data.photo.border_color else "#e5e7eb") }};
+        }
+
+        @page {
+            size: letter;
+            margin: 0; /* Margin handled by internal padding for full-bleed backgrounds */
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: var(--font-size);
+            line-height: var(--line-height);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background: var(--background, #ffffff);
+            width: 816px; /* standard 8.5x11 at 96dpi */
+            height: 1056px;
+            overflow: hidden;
+        }
+
+        .page-container {
+            width: 100%;
+            height: 100%;
+            padding: var(--margin-y) var(--margin-x);
+            position: relative;
+        }
+
+        /* Typography resets */
+        h1, h2, h3, h4, p, ul, li { margin: 0; padding: 0; }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .bullet-list {
+            padding-left: 14pt;
+            margin-top: 2pt;
+        }
+        
+        .bullet-list li {
+            margin-bottom: 2pt;
+        }
+
+        .photo-container {
+            width: var(--photo-size);
+            height: var(--photo-size);
+            border-radius: var(--photo-radius);
+            border: var(--photo-border-width) solid var(--photo-border-color);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Template Specific CSS */
+        {% block styles %}{% endblock %}
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

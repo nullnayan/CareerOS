@@ -1,0 +1,31 @@
+{
+  "source_id": "cognizant",
+  "preferred_tool": "crawl4ai",
+  "official_url": "https://careers.cognizant.com/",
+  "entry_url": "https://careers.cognizant.com/india-en/jobs/",
+  "title_from_link": true,
+  "job_url_pattern": "/jobs/[0-9]+/",
+  "approved_domains": ["cognizant.com"],
+  "company_fallback": "Cognizant",
+  "query_parameters": {"keyword": "role", "location": "location"},
+  "search_interaction": "GET keyword/location from the official public search form; country/programme eligibility checked downstream",
+  "scroll_steps": 2,
+  "page_ready_selector": "body",
+  "job_link_selectors": ["a[href*='/job/']", "a[href*='/jobs/']", "a[href*='jobid']"],
+  "next_selectors": ["a[rel='next']", "a[aria-label*='Next']", "button[aria-label*='Next']"],
+  "job_card_selector": "article, [class*='job-card'], [class*='job-listing']",
+  "title_selectors": ["h1", "h2", "h3", "[class*='title']"],
+  "company_selectors": ["[class*='company']"],
+  "location_selectors": ["[class*='location']"],
+  "description_selectors": ["[class*='description']", "main"],
+  "empty_indicators": ["no jobs found", "no openings", "no results"],
+  "login_indicators": ["sign in to continue", "log in to continue"],
+  "challenge_indicators": ["captcha", "verify you are human", "access denied", "challenge-platform"],
+  "max_pages": 2,
+  "max_details": 2,
+  "load_more_selector": null,
+  "robots_required": true,
+  "access_state": "official careers URL identified; public search route and recruiting system unverified"
+}
+
+

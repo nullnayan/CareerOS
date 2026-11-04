@@ -1,0 +1,16 @@
+id: registered_nurse
+titles: [registered nurse, rn, staff nurse, clinical nurse, charge nurse]
+family: healthcare
+core_skills:
+  nursing: 0.95
+  bls: 0.85
+  communication: 0.70
+  problem_solving: 0.65
+  leadership: 0.50
+expected_sections: [experience, education, certifications, skills]
+typical_evidence:
+  - patient volume handled
+  - care plans developed
+  - compliance standards met
+  - cross-functional collaboration
+title_progression: [student nurse, registered nurse, charge nurse, nurse manager, director of nursing]

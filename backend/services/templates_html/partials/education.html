@@ -1,0 +1,21 @@
+{# partials/education.html — v1 schema #}
+{% if data.education and section_visible('education') %}
+<div class="education-section section-block">
+    <h2>Education</h2>
+    {% for edu in data.education %}
+    {% if not edu | is_hidden %}
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">{{ edu.institution }}</span>
+            <span class="entry-meta">{{ edu.graduation_date }}</span>
+        </div>
+        <div style="margin-bottom: 2pt;">
+            <span class="entry-subtitle">{{ edu.degree }}{% if edu.field %} in {{ edu.field }}{% endif %}</span>
+            {% if edu.grade %}<span class="entry-subtitle-right">GPA: {{ edu.grade }}</span>{% endif %}
+        </div>
+        {% if edu.description %}<p style="margin-top:2pt; font-size: calc(var(--font-size) - 0.5pt);">{{ edu.description }}</p>{% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

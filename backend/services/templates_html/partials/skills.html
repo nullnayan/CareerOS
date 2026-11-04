@@ -1,0 +1,10 @@
+{# partials/skills.html — v1 schema — objects with name/level/hidden #}
+{% set visible_skills = data.skills | selectattr('hidden', 'equalto', false) | list if data.skills else [] %}
+{% if visible_skills and section_visible('skills') %}
+<div class="skills-section section-block">
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <strong>Core Competencies:</strong> {{ visible_skills | map(attribute='name') | join(', ') }}
+    </div>
+</div>
+{% endif %}

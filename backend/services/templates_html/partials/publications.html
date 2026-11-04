@@ -1,0 +1,16 @@
+{# partials/publications.html — v1 schema #}
+{% if data.publications and section_visible('publications') %}
+<div class="publications-section section-block">
+    <h2>Publications</h2>
+    {% for pub in data.publications %}{% if not pub | is_hidden %}
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</span>
+            {% if pub.date %}<span class="entry-meta">{{ pub.date }}</span>{% endif %}
+        </div>
+        {% if pub.publisher %}<div class="entry-subtitle">{{ pub.publisher }}</div>{% endif %}
+        {% if pub.summary %}<p style="margin-top:2pt; font-size: calc(var(--font-size) - 0.5pt);">{{ pub.summary }}</p>{% endif %}
+    </div>
+    {% endif %}{% endfor %}
+</div>
+{% endif %}

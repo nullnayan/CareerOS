@@ -1,0 +1,21 @@
+Bob Jones
+bob.jones@example.com | (555) 444-3322
+Dallas, TX
+
+Summary
+Systems Administrator with expertise in Linux and AWS.
+
+Work Experience
+Senior SysAdmin | Dallas Solutions
+Mar 2018 - Present
+- Maintained 99.99% uptime for 200+ production servers
+- Automated backups using bash scripting, saving 5 hours of manual work weekly
+- Migrated legacy servers to AWS EC2 and S3
+
+Education
+Associate of Science in Network Administration
+Dallas Community College
+2014 - 2016
+
+Skills
+Linux, Bash, AWS, Docker, Git, Terraform, Network Security

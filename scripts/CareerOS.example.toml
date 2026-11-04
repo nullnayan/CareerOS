@@ -1,0 +1,8 @@
+# Copy to CareerOS.toml and set the absolute path to your checkout.
+project_path = 'C:\path\to\CareerOS'
+frontend_port = 3000
+backend_port = 8010
+start_worker = true
+open_browser = true
+stop_docker_desktop = true
+startup_timeout_seconds = 180
